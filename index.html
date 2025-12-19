@@ -111,9 +111,31 @@
         }
         
         .btn {
-            <!-- JavaScript loaded from external file -->
-            <script src="/js/index.js" defer></script>
-        
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Hero background image */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(0, 33, 113, 0.8)), url('/images/hero.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white-color);
+            padding: 0 20px;
+        }
         .footer-links a:hover {
             color: var(--white-color);
             padding-left: 5px;
