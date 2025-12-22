@@ -439,6 +439,19 @@ window.LiberiaClearLogistics = {
 document.addEventListener('DOMContentLoaded', function() {
     initMobileNavigation();
     // ... any other initialization logic ...
+
+    // Dynamically load page-specific modules to keep initial bundle small
+    (async function() {
+        if (document.querySelector('#gallery')) {
+            try {
+                const m = await import('/js/pages/gallery.js');
+                if (m && typeof m.initGallery === 'function') m.initGallery();
+                console.log('Gallery module loaded');
+            } catch (err) {
+                console.warn('Failed to load gallery module', err);
+            }
+        }
+    })();
 });
 
 console.log('LiberiaClearLogistics frontend initialized successfully!');
