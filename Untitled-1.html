@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lealieenterprise | Professional Clearing & Forwarding Services</title>
+    <meta name="description" content="Liberia's premier customs clearing, freight forwarding, and logistics services. Experts in LRA regulations and Port of Monrovia procedures.">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- NEW AND IMPROVED STYLES --- */
+
+        :root {
+            --primary-color: #8a1a1a; /* A deeper, professional blue */
+            --primary-dark: #0e225e;
+            --secondary-color: #ffffff; /* A vibrant accent yellow/gold */
+            --success-color: #8a1a1a;
+            --light-bg: #f8f9fa;
+            --white-color: #ffffff;
+            --dark-text: #212529;
+            --light-text: #6c757d;
+            --border-color: #dee2e6;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* --- Basic CSS Reset & Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background: var(--white-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-of-type(odd) {
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+            margin: 15px auto 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--light-text);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .btn {
+            <!-- JavaScript loaded from external file -->
+            <script src="/js/index.js" defer></script>
+        
+        .footer-links a:hover {
+            color: var(--white-color);
+            padding-left: 5px;
+        }
+        
+        .footer-links i { margin-right: 10px; }
+        
+        .footer-social {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .footer-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white-color);
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-social a:hover {
+            background: var(--secondary-color);
+            color: var(--dark-text);
+        }
+        
+        .footer-bottom {
+            padding: 30px 0;
+            text-align: center;
+        }
+        .footer-bottom p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* --- Floating Live Chat Button --- */
+        .live-chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* --- Loading Spinner --- */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 992px) {
+            h2 { font-size: 2rem; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--white-color);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 30px 30px;
+                gap: 20px;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                transition: var(--transition);
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links li a { color: var(--dark-text); }
+            .nav-links li a:hover { color: var(--primary-color); }
+            
+            #header.scrolled { padding: 10px 0; }
+            #header { padding: 15px 0; }
+
+            .nav-links .social-links {
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid var(--border-color);
+                border-left: none;
+                padding-left: 0;
+            }
+            .social-links a i { color: var(--light-text); }
+
+            section { padding: 60px 0; }
+            .hero { height: 70vh; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 1rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+
+            .action-cards, .services-grid, .features-grid, .document-lists {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-form { grid-template-columns: 1fr; }
+            .tracking-input { flex-direction: column; }
+            .calculator-container, .portal-container, .tracking-container, .contact-grid { padding: 30px; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-social { justify-content: center; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-ship"></i>
+                    Lealieentinc.
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tracking">Tracking</a></li>
+                    <li><a href="#calculator">Quote</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#client-portal" class="client-portal-btn">Client Portal</a></li>
+                    
+                    <div class="social-links">
+                        <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/231XXXXXXXXX" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </ul>
+                <!-- The JS will create the button here -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>LEALIE ENTERPRISE INC.</h1>
+            <p>Expert customs brokerage and logistics solutions at the Freeport of Monrovia. Streamline your imports and exports with our local expertise in LRA regulations and port procedures.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get Free Consultation</a>
+                <a href="#calculator" class="btn btn-success">Instant Quote</a>
+                <a href="#tracking" class="btn btn-warning">Track Shipment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section class="quick-actions">
+        <div class="container">
+            <h2>Quick Actions</h2>
+            <div class="action-cards">
+                <div class="action-card">
+                    <i class="fas fa-ship"></i>
+                    <h3>Track Your Shipment</h3>
+                    <p>Real-time tracking for all your shipments with live updates from Freeport of Monrovia</p>
+                    <a href="#tracking" class="btn">Track Now</a>
+                </div>
+                <div class="action-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Instant Quote</h3>
+                    <p>Get immediate pricing for your shipment with our advanced calculation system</p>
+                    <a href="#calculator" class="btn">Calculate</a>
+                </div>
+                <div class="action-card">
+                    <i class="fas fa-user-lock"></i>
+                    <h3>Client Portal</h3>
+                    <p>Access your documents, shipment history, and communicate with your agent</p>
+                    <a href="#client-portal" class="btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Shipment Tracking -->
+    <section id="tracking" class="tracking">
+        <div class="container">
+            <h2>Live Shipment Tracking</h2>
+            <div class="tracking-container">
+                <div class="tracking-input">
+                    <input type="text" id="trackingNumber" placeholder="Enter your tracking number (e.g., LCL-2024-001)" required>
+                    <button class="btn" onclick="trackShipment()">Track Shipment</button>
+                </div>
+                <div id="trackingResults" class="tracking-results">
+                    <h3>Shipment Status: <span id="status" style="color: #28a745;">In Transit</span></h3>
+                    <div class="tracking-timeline">
+                        
+                        <!-- Timeline will be populated by JavaScript -->
+                    </div>
+                    <div class="shipment-details">
+                        <h4>Shipment Details</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Tracking Number</span>
+                                <span class="detail-value" id="displayTrackingNumber">LCL-2024-001</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Origin</span>
+                                <span class="detail-value" id="originPort">Antwerp, Belgium</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Destination</span>
+                                <span class="detail-value" id="destinationPort">Monrovia, Liberia</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">ETA</span>
+                                <span class="detail-value" id="etaDate">Loading...</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Carrier</span>
+                                <span class="detail-value" id="carrierName">Maersk Line</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Last Update</span>
+                                <span class="detail-value" id="lastUpdate">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instant Quote Calculator -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>Instant Quote Calculator</h2>
+            <div class="calculator-container">
+                <form id="quoteForm" class="calculator-form">
+                    <select id="serviceType" required>
+                        <option value="">Select Service Type</option>
+                        <option value="clearing">Customs Clearing Only</option>
+                        <option value="sea_freight">Sea Freight + Clearing</option>
+                        <option value="air_freight">Air Freight + Clearing</option>
+                        <option value="full_logistics">Full Logistics Service</option>
+                    </select>
+                    
+                    <select id="origin" required>
+                        <option value="">Origin Country</option>
+                        <option value="china">China</option>
+                        <option value="usa">United States</option>
+                        <option value="europe">Europe</option>
+                        <option value="uae">UAE</option>
+                        <option value="south_africa">South Africa</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <select id="cargoType" required>
+                        <option value="">Cargo Type</option>
+                        <option value="general">General Merchandise</option>
+                        <option value="construction">Construction Materials</option>
+                        <option value="vehicles">Vehicles & Machinery</option>
+                        <option value="perishable">Perishable Goods</option>
+                        <option value="hazardous">Hazardous Materials</option>
+                    </select>
+                    
+                    <input type="number" id="weight" placeholder="Weight (kg)" min="1" step="0.1" required>
+                    
+                    <input type="number" id="volume" placeholder="Volume (m³)" step="0.1" min="0.1" required>
+                    
+                    <input type="number" id="value" placeholder="Cargo Value (USD)" min="1" required>
+                    
+                    <div class="full-width">
+                        <textarea id="cargoDescription" placeholder="Cargo Description (e.g., Construction equipment, consumer goods, etc.)" rows="3" required></textarea>
+                    </div>
+                </form>
+                
+                <button class="btn" onclick="calculateQuote()" style="width: 100%;">Calculate Quote</button>
+                
+                <div id="quoteResult" class="quote-result">
+                    <h3>Your Estimated Cost</h3>
+                    <div class="quote-amount">$<span id="calculatedAmount">0.00</span> USD</div>
+                    <p>This is an estimated quote. Final pricing may vary based on actual documentation and customs duties.</p>
+                    <button class="btn btn-success" style="margin-top: 15px;" onclick="requestDetailedQuote()">Request Detailed Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SMS Dashboard Section -->
+<section id="sms-dashboard" class="sms-dashboard" style="display: none;">
+    <div class="container">
+        <h2>SMS Management</h2>
+        
+        <div class="sms-stats">
+            <div class="stat-card">
+                <h3>SMS Balance</h3>
+                <div class="balance-amount" id="smsBalance">Loading...</div>
+                <button onclick="checkSMSBalance()" class="btn btn-sm">Refresh</button>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Messages Sent</h3>
+                <div class="stat-number" id="sentCount">0</div>
+                <span>This Month</span>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Success Rate</h3>
+                <div class="stat-number" id="successRate">0%</div>
+                <span>Delivery Rate</span>
+            </div>
+        </div>
+
+        <div class="sms-actions">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+                <button onclick="showBulkSMSModal()" class="btn btn-primary">
+                    <i class="fas fa-bullhorn"></i> Send Bulk SMS
+                </button>
+                <button onclick="showUrgentAlertModal()" class="btn btn-warning">
+                    <i class="fas fa-exclamation-triangle"></i> Send Urgent Alert
+                </button>
+                <button onclick="loadSMSLogs()" class="btn btn-info">
+                    <i class="fas fa-history"></i> View SMS Logs
+                </button>
+            </div>
+        </div>
+
+        <!-- Bulk SMS Modal -->
+        <div id="bulkSMSModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Send Bulk SMS</h3>
+                <form id="bulkSMSForm">
+                    <div class="form-group">
+                        <label>Recipients:</label>
+                        <select id="clientGroup" multiple style="width: 100%; height: 150px;">
+                            <!-- Clients will be loaded here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <textarea id="bulkMessage" rows="4" maxlength="160" 
+                                  placeholder="Type your message here (160 characters max)"></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/160 characters
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Template:</label>
+                        <select id="smsTemplate">
+                            <option value="CUSTOM">Custom Message</option>
+                            <option value="SHIPMENT_UPDATE">Shipment Update</option>
+                            <option value="PAYMENT_REMINDER">Payment Reminder</option>
+                            <option value="URGENT_ALERT">Urgent Alert</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Messages</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- SMS Logs Table -->
+        <div class="sms-logs">
+            <h3>Recent SMS Activity</h3>
+            <div class="table-responsive">
+                <table id="smsLogsTable">
+                    <thead>
+                        <tr>
+                            <th>Phone</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th>Gateway</th>
+                            <th>Cost</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- SMS logs will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Add this section to your existing HTML -->
+<section id="payments" class="payments">
+    <div class="container">
+        <h2>Payment & Invoices</h2>
+        <div class="payment-container">
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <h3>Pay Your Invoice</h3>
+                <div class="method-cards">
+                    <div class="method-card" onclick="selectPaymentMethod('stripe')">
+                        <i class="fab fa-cc-stripe"></i>
+                        <h4>Credit/Debit Card</h4>
+                        <p>Pay securely with Stripe</p>
+                    </div>
+                    <div class="method-card" onclick="selectPaymentMethod('paypal')">
+                        <i class="fab fa-paypal"></i>
+                        <h4>PayPal</h4>
+                        <p>Pay with your PayPal account</p>
+                    </div>
+                    <div class="method-card" onclick="selectPaymentMethod('bank')">
+                        <i class="fas fa-university"></i>
+                        <h4>Bank Transfer</h4>
+                        <p>Direct bank transfer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoice List -->
+            <div class="invoice-list">
+                <h3>Your Invoices</h3>
+                <div id="invoicesContainer">
+                    <!-- Invoices will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <div id="paymentForm" class="payment-form" style="display: none;">
+                <h3 id="paymentTitle">Complete Payment</h3>
+                <div id="stripeForm">
+                    <!-- Stripe Elements will be inserted here -->
+                    <div id="card-element"></div>
+                    <button id="stripe-submit" class="btn">Pay Now</button>
+                </div>
+                <div id="paypalForm" style="display: none;">
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Client Login Portal -->
+    <section id="client-portal" class="login-portal">
+        <div class="container">
+            <h2>Client Portal</h2>
+            <div class="portal-container">
+                <div class="portal-tabs">
+                    <button class="portal-tab active" onclick="showTab(event, 'login')">Login</button>
+                    <button class="portal-tab" onclick="showTab(event, 'register')">Register</button>
+                </div>
+                
+                <div id="loginForm" class="portal-form active">
+                    <h3>Client Login</h3>
+                    <input type="email" id="loginEmail" placeholder="Email Address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button class="btn" onclick="clientLogin()" style="width: 100%;">Login to Portal</button>
+                    <p style="text-align: center; margin-top: 15px;"><a href="#">Forgot Password?</a></p>
+                </div>
+                
+                <div id="registerForm" class="portal-form">
+                    <h3>New Client Registration</h3>
+                    <input type="text" id="regCompany" placeholder="Company Name" required>
+                    <input type="email" id="regEmail" placeholder="Email Address" required>
+                    <input type="tel" id="regPhone" placeholder="Phone Number" required>
+                    <input type="password" id="regPassword" placeholder="Password" required>
+                    <input type="text" id="regContactPerson" placeholder="Contact Person (Optional)">
+                    <button class="btn" onclick="clientRegister()" style="width: 100%;">Register Account</button>
+                </div>
+                
+                <div id="portalDemo" style="display: none; text-align: center; margin-top: 30px; padding: 20px; background: var(--light-bg); border-radius: 8px;">
+                    <!-- Portal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Customs Clearing & Brokerage</h3>
+                    <p>Expert handling of LRA regulations and customs procedures for smooth import and export clearance at Liberian ports.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ship"></i>
+                    <h3>Freight Forwarding</h3>
+                    <p>Sea, air, and land freight solutions. FCL/LCL shipments with major shipping lines to and from Liberia.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-anchor"></i>
+                    <h3>Port Agency Services</h3>
+                    <p>Professional representation and coordination at Freeport of Monrovia and Roberts International Airport.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Warehousing & Distribution</h3>
+                    <p>Secure storage facilities and efficient last-mile delivery throughout Liberia.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-truck-loading"></i>
+                    <h3>Project Cargo Handling</h3>
+                    <p>Specialized handling of oversized and heavy-lift cargo for construction, mining, and NGO sectors.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cargo Insurance</h3>
+                    <p>Comprehensive marine cargo insurance to protect your shipments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="documents">
+        <div class="container">
+            <h2>Required Documents Checklist</h2>
+            <div class="document-lists">
+                <div class="document-list">
+                    <h3>For Importers</h3>
+                    <ul>
+                        <li>Commercial Invoice</li>
+                        <li>Bill of Lading/Air Waybill</li>
+                        <li>Packing List</li>
+                        <li>Insurance Certificate</li>
+                        <li>Import Permit Declaration (IPD)</li>
+                        <li>Certificate of Origin</li>
+                        <li>Phytosanitary Certificate (if applicable)</li>
+                        <li>Tax Clearance Certificate</li>
+                        <li>Business Registration Documents</li>
+                    </ul>
+                </div>
+                <div class="document-list">
+                    <h3>For Exporters</h3>
+                    <ul>
+                        <li>Commercial Invoice</li>
+                        <li>Packing List</li>
+                        <li>Export License</li>
+                        <li>Certificate of Origin</li>
+                        <li>Bill of Lading</li>
+                        <li>Insurance Certificate</li>
+                        <li>Quality Certificates</li>
+                        <li>Export Declaration Form</li>
+                        <li>Shipping Instructions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="about-content">
+                <p>With years of experience navigating the complexities of Liberian customs and port procedures, we offer unparalleled local expertise and reliability. Our team understands the unique challenges of importing and exporting in Liberia.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Local Expertise</h3>
+                        <p>Deep knowledge of LRA regulations and port authorities in Liberia</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Clearance</h3>
+                        <p>Efficient processing at Freeport of Monrovia and Roberts International Airport</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock customer service and shipment tracking</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Compliance Guarantee</h3>
+                        <p>Full compliance with Liberia Revenue Authority requirements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong><br>
+                                109 Ashmun & Lynch Streets<br>
+                                1000 Monrovia, 10 Liberia
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                +231-777-017-825<br>
+                                +231-770-699-089
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong><br>
+                                +231-776-464-548
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                info@lealieentinc.com<br>
+                                operations@lealieentinc.com
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Business Hours</strong><br>
+                                Mon-Fri: 7:00 AM - 7:00 PM<br>
+                                Sat: 8:00 AM - 2:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone" required>
+                        <select required>
+                            <option value="">Select Service Interested In</option>
+                            <option value="clearing">Customs Clearing</option>
+                            <option value="freight">Freight Forwarding</option>
+                            <option value="warehousing">Warehousing</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LealieClearLogistics</h3>
+                    <p>Your trusted partner for customs clearing, freight forwarding, and logistics solutions in Liberia. We simplify international trade with local expertise.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/231881234567" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#tracking"><i class="fas fa-chevron-right"></i> Track Shipment</a></li>
+                        <li><a href="#calculator"><i class="fas fa-chevron-right"></i> Get Quote</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Customs Clearing</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Freight Forwarding</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Port Agency</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Warehousing</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Project Cargo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>  109 Ashmun & Lynch Streets<br>
+                                1000 Monrovia, 10 Liberia</a></li>
+                        <li><a href="tel:+ +231-777-017-825"><i class="fas fa-phone"></i> + +231-777-017-825</a></li>
+                        <li><a href="https://wa.me/ +231-777-017-825"><i class="fab fa-whatsapp"></i>  +231-777-017-825</a></li>
+                        <li><a href="mailto:info@liberiacclearlogistics.com"><i class="fas fa-envelope"></i> info@lealieentinc.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lealieentinc. All rights reserved. | Professional Clearing & Forwarding Services in Liberia</p>
+                <p style="margin-top: 10px; font-size: 0.9em;">Compliant with Liberia Revenue Authority (LRA) and National Port Authority regulations</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <a href="https://wa.me/231881234567?text=Hello!%20I%20need%20information%20about%20your%20clearing%20services" 
+       class="live-chat-btn" 
+       target="_blank"
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript (with previous error corrected) -->
+    <script>
+        const API_BASE = 'http://localhost:5000/api';
+
+        // --- ALL JAVASCRIPT LOGIC GOES HERE ---
+        // (The JS from the previous request, with the duplicate listener removed, fits here)
+        
+        // Tab Management - Updated to pass event
+        function showTab(event, tabName) {
+            document.querySelectorAll('.portal-form').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.querySelectorAll('.portal-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(tabName + 'Form').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Initialize mobile navigation
+        function initMobileNavigation() {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelector('.nav-links');
+            
+            const mobileMenuBtn = document.createElement('button');
+            mobileMenuBtn.className = 'mobile-menu-btn';
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.onclick = toggleMobileMenu;
+            nav.appendChild(mobileMenuBtn);
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+         // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Form validation and enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is already logged in
+            const user = localStorage.getItem('user');
+            if (user) {
+                showClientPortal(JSON.parse(user));
+            }
+
+            // Add input validation
+            const numberInputs = document.querySelectorAll('input[type="number"]');
+            numberInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.value < 0) {
+                        this.value = 0;
+                    }
+                });
+            });
+
+            // Add enter key support for tracking
+            document.getElementById('trackingNumber').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    trackShipment();
+                }
+            });
+
+            // Initialize with demo data
+            initializeDemoData();
+        });
+
+        // Initialize with some demo data for better UX
+        function initializeDemoData() {
+            // Pre-fill tracking number with example
+            const trackingInput = document.getElementById('trackingNumber');
+            if (trackingInput && !trackingInput.value) {
+                trackingInput.placeholder = 'e.g., LCL-2024-001, LCL-2024-002';
+            }
+
+            // Add sample tracking numbers for testing
+            if (window.location.hash === '#tracking' && !trackingInput.value) {
+                trackingInput.value = 'LCL-2024-001';
+            }
+        }
+
+        // Enhanced quote calculation with local fallback
+        async function calculateQuoteWithFallback(formData) {
+            try {
+                const response = await fetch(`${API_BASE}/quotes/calculate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.warn('API unavailable, using local calculation:', error);
+                return calculateQuoteLocally(formData);
+            }
+        }
+
+        // Local quote calculation fallback
+        function calculateQuoteLocally(formData) {
+            const serviceMultipliers = {
+                'clearing': 1,
+                'sea_freight': 2.5,
+                'air_freight': 4,
+                'full_logistics': 3
+            };
+            
+            const cargoMultipliers = {
+                'general': 1,
+                'construction': 1.2,
+                'vehicles': 1.5,
+                'perishable': 1.8,
+                'hazardous': 2.2
+            };
+
+            const baseCost = (serviceMultipliers[formData.serviceType] || 1) * 500;
+            const weightCost = formData.weight * 2.5;
+            const volumeCost = formData.volume * 150;
+            const cargoMultiplier = cargoMultipliers[formData.cargoType] || 1;
+            
+            const calculatedAmount = (baseCost + weightCost + volumeCost) * cargoMultiplier;
+
+            return {
+                success: true,
+                data: {
+                    calculatedAmount: calculatedAmount.toFixed(2),
+                    currency: "USD",
+                    quoteId: `LOCAL-QUOTE-${Date.now()}`,
+                    breakdown: {
+                        baseFee: baseCost.toFixed(2),
+                        weightCharge: weightCost.toFixed(2),
+                        volumeCharge: volumeCost.toFixed(2),
+                        cargoSurcharge: cargoMultiplier
+                    },
+                    note: "Calculated locally - connect to backend for accurate pricing"
+                }
+            };
+        }
+
+        // Enhanced tracking with local fallback
+        async function trackShipmentWithFallback(trackingNumber) {
+            try {
+                const response = await fetch(`${API_BASE}/shipments/track/${trackingNumber}`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.warn('API unavailable, using demo tracking data:', error);
+                return getDemoTrackingData(trackingNumber);
+            }
+        }
+
+        // Demo tracking data fallback
+        function getDemoTrackingData(trackingNumber) {
+            const demoData = {
+                'LCL-2024-001': {
+                    trackingNumber: 'LCL-2024-001',
+                    status: 'customs_clearance',
+                    description: 'Construction Materials',
+                    client: 'Liberia Construction Co.',
+                    origin: {
+                        country: 'China',
+                        port: 'Port of Shanghai'
+                    },
+                    destination: {
+                        country: 'Liberia',
+                        port: 'Freeport of Monrovia'
+                    },
+                    timeline: [
+                        {
+                            status: 'customs_clearance',
+                            description: 'Customs processing at Freeport of Monrovia',
+                            location: 'Monrovia, Liberia',
+                            timestamp: new Date().toISOString()
+                        },
+                        {
+                            status: 'arrived',
+                            description: 'Vessel arrived at port',
+                            location: 'Freeport of Monrovia',
+                            timestamp: new Date(Date.now() - 86400000).toISOString()
+                        },
+                        {
+                            status: 'in_transit',
+                            description: 'Departed origin port',
+                            location: 'Port of Shanghai',
+                            timestamp: new Date(Date.now() - 604800000).toISOString()
+                        }
+                    ],
+                    estimatedArrival: new Date(Date.now() + 259200000).toISOString(),
+                    carrier: {
+                        name: 'Maersk Line',
+                        vessel: 'MAERSK MONROVIA'
+                    }
+                },
+                'LCL-2024-002': {
+                    trackingNumber: 'LCL-2024-002',
+                    status: 'in_transit',
+                    description: 'Mining Equipment',
+                    client: 'Liberia Mining Corp.',
+                    origin: {
+                        country: 'USA',
+                        port: 'Port of Baltimore'
+                    },
+                    destination: {
+                        country: 'Liberia',
+                        port: 'Freeport of Monrovia'
+                    },
+                    timeline: [
+                        {
+                            status: 'in_transit',
+                            description: 'Vessel in Atlantic Ocean',
+                            location: 'Mid-Atlantic',
+                            timestamp: new Date(Date.now() - 172800000).toISOString()
+                        },
+                        {
+                            status: 'booked',
+                            description: 'Booking confirmed and documentation completed',
+                            location: 'Port of Baltimore',
+                            timestamp: new Date(Date.now() - 2592000000).toISOString()
+                        }
+                    ],
+                    estimatedArrival: new Date(Date.now() + 604800000).toISOString(),
+                    carrier: {
+                        name: 'MSC',
+                        vessel: 'MSC LIBERIA'
+                    }
+                }
+            };
+
+            return {
+                success: true,
+                data: demoData[trackingNumber] || {
+                    trackingNumber: trackingNumber,
+                    status: 'pending',
+                    description: 'Shipment information not found',
+                    timeline: [],
+                    note: 'Demo data - connect to backend for real tracking'
+                }
+            };
+        }
+
+        // Update the main tracking function to use fallback
+        async function trackShipment() {
+            const trackingNumber = document.getElementById('trackingNumber').value.trim();
+            const resultsDiv = document.getElementById('trackingResults');
+            
+            if (!trackingNumber) {
+                alert('Please enter a tracking number');
+                return;
+            }
+
+            try {
+                // Show loading state
+                const trackBtn = document.querySelector('.tracking-input .btn');
+                const originalText = trackBtn.innerHTML;
+                trackBtn.innerHTML = '<div class="loading"></div> Tracking...';
+                trackBtn.disabled = true;
+
+                const data = await trackShipmentWithFallback(trackingNumber);
+                
+                // Restore button
+                trackBtn.innerHTML = originalText;
+                trackBtn.disabled = false;
+                
+                if (data.success) {
+                    displayTrackingResults(data.data);
+                    resultsDiv.style.display = 'block';
+                    resultsDiv.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Shipment not found. Please check your tracking number.');
+                }
+            } catch (error) {
+                console.error('Error tracking shipment:', error);
+                alert('Error tracking shipment. Please try again.');
+                
+                // Restore button in case of error
+                const trackBtn = document.querySelector('.tracking-input .btn');
+                trackBtn.innerHTML = 'Track Shipment';
+                trackBtn.disabled = false;
+            }
+        }
+
+        // Update the main quote function to use fallback
+        async function calculateQuote() {
+            const formData = {
+                serviceType: document.getElementById('serviceType').value,
+                origin: document.getElementById('origin').value,
+                cargoType: document.getElementById('cargoType').value,
+                weight: parseFloat(document.getElementById('weight').value),
+                volume: parseFloat(document.getElementById('volume').value),
+                value: parseFloat(document.getElementById('value').value),
+                description: document.getElementById('cargoDescription').value
+            };
+
+            // Validate required fields
+            if (!formData.serviceType || !formData.origin || !formData.cargoType || 
+                !formData.weight || !formData.volume) {
+                alert('Please fill all required fields');
+                return;
+            }
+
+            try {
+                const data = await calculateQuoteWithFallback(formData);
+                
+                if (data.success) {
+                    displayQuoteResult(data.data);
+                } else {
+                    alert('Error calculating quote: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error calculating quote:', error);
+                alert('Error calculating quote. Please try again.');
+            }
+        }
+
+        // Enhanced quote result display
+        function displayQuoteResult(quoteData) {
+            const calculatedAmount = document.getElementById('calculatedAmount');
+            const quoteResult = document.getElementById('quoteResult');
+            
+            calculatedAmount.textContent = quoteData.calculatedAmount;
+            
+            // Add breakdown if available
+            if (quoteData.breakdown) {
+                let breakdownHtml = `
+                    <div class="quote-breakdown">
+                        <div class="breakdown-item">
+                            <div class="detail-label">Base Fee</div>
+                            <div class="detail-value">$${quoteData.breakdown.baseFee}</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="detail-label">Weight Charge</div>
+                            <div class="detail-value">$${quoteData.breakdown.weightCharge}</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="detail-label">Volume Charge</div>
+                            <div class="detail-value">$${quoteData.breakdown.volumeCharge}</div>
+                        </div>
+                `;
+                
+                if (quoteData.breakdown.cargoSurcharge && quoteData.breakdown.cargoSurcharge > 1) {
+                    breakdownHtml += `
+                        <div class="breakdown-item">
+                            <div class="detail-label">Cargo Surcharge</div>
+                            <div class="detail-value">${quoteData.breakdown.cargoSurcharge}x</div>
+                        </div>
+                    `;
+                }
+                
+                breakdownHtml += '</div>';
+                
+                // Insert breakdown before the note
+                const noteElement = quoteResult.querySelector('p');
+                if (noteElement) {
+                    noteElement.insertAdjacentHTML('beforebegin', breakdownHtml);
+                }
+            }
+            
+            // Add note if present
+            if (quoteData.note) {
+                const existingNote = quoteResult.querySelector('.quote-note');
+                if (!existingNote) {
+                    const noteElement = document.createElement('p');
+                    noteElement.className = 'quote-note';
+                    noteElement.style.fontSize = '0.9em';
+                    noteElement.style.color = '#6c757d';
+                    noteElement.style.marginTop = '10px';
+                    noteElement.textContent = quoteData.note;
+                    quoteResult.appendChild(noteElement);
+                }
+            }
+            
+            quoteResult.style.display = 'block';
+            quoteResult.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mobile menu toggle (for future responsive enhancement)
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Add responsive navigation for mobile
+        function initMobileNavigation() {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // Create mobile menu button
+            const mobileMenuBtn = document.createElement('button');
+            mobileMenuBtn.className = 'mobile-menu-btn';
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.style.display = 'none';
+            mobileMenuBtn.onclick = toggleMobileMenu;
+            
+            nav.appendChild(mobileMenuBtn);
+            
+            // Check screen size and toggle mobile menu
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuBtn.style.display = 'block';
+                    navLinks.style.display = 'none';
+                } else {
+                    mobileMenuBtn.style.display = 'none';
+                    navLinks.style.display = 'flex';
+                }
+            }
+            
+            window.addEventListener('resize', checkScreenSize);
+            checkScreenSize(); // Initial check
+        }
+
+        // Initialize mobile navigation when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileNavigation();
+        });
+// SMS Management Functions
+async function checkSMSBalance() {
+    try {
+        const response = await fetch('/api/sms/balance', {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            document.getElementById('smsBalance').textContent = 
+                `${data.data.balance} ${data.data.currency}`;
+        }
+    } catch (error) {
+        console.error('Error checking SMS balance:', error);
+    }
+}
+
+async function sendBulkSMS(clientIds, message, templateType) {
+    try {
+        const response = await fetch('/api/sms/bulk', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({
+                clientIds,
+                message,
+                templateType
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            alert(`Bulk SMS sent successfully to ${data.data.sentCount} recipients`);
+            return true;
+        } else {
+            alert('Failed to send bulk SMS: ' + data.message);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error sending bulk SMS:', error);
+        alert('Error sending bulk SMS');
+        return false;
+    }
+}
+
+async function loadSMSLogs() {
+    try {
+        const response = await fetch('/api/sms/logs', {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+            displaySMSLogs(data.data);
+        }
+    } catch (error) {
+        console.error('Error loading SMS logs:', error);
+    }
+}
+
+function displaySMSLogs(logs) {
+    const tbody = document.querySelector('#smsLogsTable tbody');
+    tbody.innerHTML = logs.map(log => `
+        <tr>
+            <td>${log.phoneNumber}</td>
+            <td title="${log.message}">${log.message.substring(0, 50)}${log.message.length > 50 ? '...' : ''}</td>
+            <td>
+                <span class="status-badge status-${log.status}">
+                    ${log.status}
+                </span>
+            </td>
+            <td>${log.gateway}</td>
+            <td>$${log.cost?.toFixed(2) || '0.00'}</td>
+            <td>${new Date(log.createdAt).toLocaleDateString()}</td>
+        </tr>
+    `).join('');
+}
+
+// Character counter for SMS messages
+document.getElementById('bulkMessage')?.addEventListener('input', function() {
+    const count = this.value.length;
+    document.getElementById('charCount').textContent = count;
+    
+    if (count > 160) {
+        this.value = this.value.substring(0, 160);
+        document.getElementById('charCount').textContent = 160;
+    }
+});
+
+// Initialize SMS dashboard when admin logs in
+function initializeSMSDashboard() {
+    checkSMSBalance();
+    loadSMSLogs();
+    
+    // Set up periodic refresh every 5 minutes
+    setInterval(() => {
+        checkSMSBalance();
+        loadSMSLogs();
+    }, 300000);
+}
+        // Export functionality for future use
+        window.LiberiaClearLogistics = {
+            trackShipment,
+            calculateQuote,
+            clientLogin,
+            clientRegister,
+            logout,
+            showTab
+        };
+         // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileNavigation();
+            // ... any other initialization logic ...
+        });
+        
+        console.log('LiberiaClearLogistics frontend initialized successfully!');
+        console.log('Backend API URL:', API_BASE);
+    </script>
+</body>
+</html> 
