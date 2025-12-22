@@ -219,6 +219,18 @@
             .footer-content { grid-template-columns: 1fr 1fr; }
         }
 
+        /* Gallery styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+        .gallery-item { overflow: hidden; border-radius: 8px; }
+        .gallery-item img { width: 100%; height: 180px; object-fit: cover; display:block; opacity:0; transition: opacity .35s ease-in-out; }
+        .gallery-item img.loaded { opacity: 1; }
+        .gallery-item::after { content: '' ; display:block; padding-bottom:40px; }
+
         @media (max-width: 768px) {
             .mobile-menu-btn { display: block; }
             .nav-links {
@@ -670,6 +682,17 @@
                     <h3>Cargo Insurance</h3>
                     <p>Comprehensive marine cargo insurance to protect your shipments.</p>
                 </div>
+            </div>
+
+            <!-- Demo Gallery Section (images use data-src for lazy loading) -->
+            <h2>Gallery</h2>
+            <div id="gallery" class="gallery-grid">
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 1" class="gallery-img"></div>
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 2" class="gallery-img"></div>
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 3" class="gallery-img"></div>
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 4" class="gallery-img"></div>
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 5" class="gallery-img"></div>
+                <div class="gallery-item"><img data-src="/images/hero.jpg" alt="Gallery image 6" class="gallery-img"></div>
             </div>
         </div>
     </section>
